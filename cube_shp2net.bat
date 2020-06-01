@@ -6,7 +6,6 @@
 VOYAGER "%~dp0%~nx0" %args%
 @rem TPPLUS "%~dp0%~nx0" /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
 @REM RUNTPP VOYAGER "%~dp0%~nx0" -PH:32767 -PW:255 /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
-@REM "%ProgramFiles(x86)%\Citilabs\Cube\CUBE.EXE"  "c:\TEMP\TotalCMD\addon\sci\civil\cube\cube_net2shp.s" %*
 
 @timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
 
