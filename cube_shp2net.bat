@@ -1,4 +1,4 @@
-﻿/*
+/*
 @call "%~dp0cube_p" %*&&@TITLE %~n0 (%*)&@echo -- %~n0 (%*)
 
 @set al_o=%~dp1%~n1.net

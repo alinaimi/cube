@@ -1,4 +1,4 @@
-﻿/*
+/*
 @call "%~dp0cube_p" %*&&@TITLE %~n0 (%*)&@echo -- %~n0 (%*)
 
 @set al_o_link=%~dp1%~n1_link
