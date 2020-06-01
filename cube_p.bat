@@ -1,7 +1,8 @@
 @Echo on &@cls &@Color 3F &@TITLE %~n0 (%*)
 @rem @setlocal EnableDelayedExpansion :: cause path doesn't transfer to other bash files
-@set p=%ProgramW6432%\Citilabs\CubeVoyager
-@PATH %p%;%ProgramFiles(x86)%\Citilabs\CubeVoyager;%PATH%
+@echo %path%|%SystemRoot%\System32\find /i      "%ProgramW6432%\Citilabs\CubeVoyager">nul||@path %ProgramW6432%\Citilabs\CubeVoyager;%path%
+@echo %path%|%SystemRoot%\System32\find /i "%ProgramFiles(x86)%\Citilabs\CubeVoyager">nul||@path %ProgramFiles(x86)%\Citilabs\CubeVoyager;%path%
+
 @set args=-PH:32767 -PW:255 /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
 
 @cd/d "%~dp1"

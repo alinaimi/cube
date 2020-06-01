@@ -1,2 +1,2 @@
 # cube
-Handy cube scripts combined w/ windows batch files
+Handy Citilabs' cube scripts. I combined the cube scripts with windows batch file launcher.
