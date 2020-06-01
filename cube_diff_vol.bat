@@ -4,7 +4,7 @@
 @set     al_o=%~dp2%~n1_diff_%~n2%~x1
 @set al_o_vol=%~dp2%~n1_diff_vol_%~n2%~x1
 
-VOYAGER "%~dp0%~nx0"             %args%
+VOYAGER "%~dp0%~nx0" %args%
 
 @timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
 
@@ -27,7 +27,7 @@ FILEO NETO = "%al_o_vol%",
    LOAD1=LI.1.V_1
    LOAD2=LI.2.V_1  
   
-   LOADCHG=(LOAD2  -LOAD1)
+   LOADCHG=(LOAD2 - LOAD1)
    ABSLOADCHG=ABS(LOAD2-LOAD1)
 if (load1>0) PRCLOADCHG=LOADCHG/LOAD1
    CSPD1=LI.1.CSPD_1
