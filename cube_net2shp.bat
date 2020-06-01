@@ -15,13 +15,11 @@ VOYAGER "%~dp0%~nx0" %args%
 
 print file="%al_o_link%.log", list='%al_1%',' ','@ali@',X(6.0)
 
-RUN PGM=NETWORK
-;RUN PGM=NETWORK PRNFILE=..\@scenario@\Outputs\NETCLEAN.PRN MSG='Clean Final Network'
+RUN PGM=NETWORK PRNFILE=net2shp.prn MSG='net2shp'
 ;RUN PGM=CUBE
 ;function=SHAPE2NETWORK
 
-;FILEI NETI[1]= "%al_1%"
-FILEI LINKI[1]= "%al_1%"
+FILEI NETI[1]= "%al_1%"
 ;FILEI GEOMI[1]="%al_1%.shp" ;Note that the GEOMI index is 1, even with LINKI[1] specified. The GEOMI data will be used as the geometry source.
 
 FILEO LINKO  = "%al_o_link%.shp",

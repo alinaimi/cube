@@ -11,12 +11,10 @@ VOYAGER "%~dp0%~nx0" %args%
 
 ;print file="%al_o_link%.log", list='%al_1%',' ','@ali@',X(6.0)
 RUN PGM=NETWORK
-;RUN PGM=NETWORK PRNFILE='..\%scenario%\outputs\NETOUT.PRN' MSG='Convert to NET for efficiency'
 
 FILEI LINKI[1]= "%al_1%"
 
 FILEI LINKI[1] = "%al_1%"
 FILEO NETO = "%al_o%",
-;EXCLUDE =  OBJECTID, Shape, A, B, A1, B1, Flag
 
 ENDRUN
