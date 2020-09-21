@@ -8,7 +8,7 @@
 @cd/d "%~dp1"
 @md "%~dp1workdir"
 
-@set al_1=%~dp1%~nx1
-@set al_2=%~dp2%~nx2
+@set al_1=%~dpnx1
+@set al_2=%~dpnx2
 
 @rem path &^ pause
