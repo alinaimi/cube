@@ -1,8 +1,8 @@
 /*
 @call "%~dp0cube_p" %*&&@TITLE %~n0 (%*)&@echo -- %~n0 (%*)
-@set al_o=%~dp1%~n1_merged_over_%~n2%~x1
+@set al_o=%~dpn1_merged_over_%~n2%~x1
 
-VOYAGER "%~dp0%~nx0" %args%
+VOYAGER "%~dpnx0" %args%
 
 @timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
 
