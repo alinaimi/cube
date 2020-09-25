@@ -4,7 +4,7 @@
 @set     al_o=%~dp2%~n1_diff_%~n2%~x1
 @set al_o_vol=%~dp2%~n1_diff_vol_%~n2%~x1
 
-VOYAGER "%~dp0%~nx0"             %args%
+VOYAGER "%~dpnx0"             %args%
 VOYAGER "%~dp0cube_diff_vol.bat" %args%
 
 @timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
