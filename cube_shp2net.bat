@@ -1,11 +1,11 @@
 /*
 @call "%~dp0cube_p" %*&&@TITLE %~n0 (%*)&@echo -- %~n0 (%*)
 
-@set al_o=%~dp1%~n1.net
+@set al_o=%~dpn1.net
 
-VOYAGER "%~dp0%~nx0" %args%
-@rem TPPLUS "%~dp0%~nx0" /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
-@REM RUNTPP VOYAGER "%~dp0%~nx0" -PH:32767 -PW:255 /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
+VOYAGER "%~dpnx0" %args%
+@rem TPPLUS "%~dpnx0" /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
+@REM RUNTPP VOYAGER "%~dpnx0" -PH:32767 -PW:255 /Command /CloseWhenDone /Minimize /NoSplash /Start -Sworkdir "%~dp1"
 
 @timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
 
