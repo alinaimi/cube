@@ -96,11 +96,20 @@ if (sh.AppActivate(pid_cube)) {
   SendKeys("%h"); SendKeys("p"); SendKeys("l"); SendKeys("2"); sleep(1000); // opens "Play Edit Log"
   var fn = argv[0].replace(/:/g, ":");
   console.log("applying : " + fn);
-  SendKeys(fn); sleep(50); // paste .log file
-  // SendKeys("^v"); // paste .log file
+
+  //!--- paste .log file
+  SendKeys(fn); sleep(50);
+  // SendKeys("^v");
   SendKeys("{ENTER}"); sleep(500);
+
   SendKeys("y"); sleep(100); // y: apply only changed attributes (leave branched changes as is) / no: apply all the attributes in .log file (overwrites the branched ones, not desirable in most cases)
-  SendKeys(" "); sleep(50); // do some confirming
+
+  //!--- do some confirming
+  for (var i = 1; i < 10; i++) {
+    //   SendKeys(" ");
+    sleep(50);
+  }
+
   // WScript.Quit(0);
 } else {
   WScript.Echo("Failed to find application with title: " + title);

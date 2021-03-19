@@ -2,6 +2,7 @@
 
 ::!--- setting up the paths
 @set path=
+@rem @setlocal EnableDelayedExpansion :: cause path doesn't transfer to other bash files
 @set p=%ProgramW6432%\Citilabs\CubeVoyager
 @PATH %p%;%ProgramFiles(x86)%\Citilabs\CubeVoyager;%PATH%
 @PATH %ProgramFiles(x86)%\Citilabs\Cube;%PATH%
@@ -9,21 +10,22 @@
 @echo %path%|%SystemRoot%\System32\find /i      "%ProgramW6432%\Citilabs\CubeVoyager">nul||@path      %ProgramW6432%\Citilabs\CubeVoyager;%path%
 @echo %path%|%SystemRoot%\System32\find /i "%ProgramFiles(x86)%\Citilabs\CubeVoyager">nul||@path %ProgramFiles(x86)%\Citilabs\CubeVoyager;%path%
 
+@for /f "tokens=2" %%a in ('tasklist^|find /i "cube.exe"') do @(@set pid_cube=%%a)
+
 @cd/d "%~dp1"
 
 @set wd=%~dp1workdir
 @if [%~dp1]==[] @set wd=%~dp0workdir
 @IF NOT EXIST "%wd%" (@md "%wd%")
 
-@set args=-PH:32767 -PW:255 /Command /CloseWhenDone /Minimize /NoSplash /Start /HideScript /High -Sworkdir "%wd%" -S"%wd%"
-
 @for %%a in ("%1") do @for %%b in ("%%~dpa\.") do @set "parent1=%%~nxb"
 @for %%a in ("%2") do @for %%b in ("%%~dpa\.") do @set "parent2=%%~nxb"
 
 ::!--- Getting Local Date/Time
-:: @call dt
+@rem @call dt
+@rem %COMMANDER_PATH%\addon\aLieN\Windows\date.exe +"%Y-%m-%d"
 @for /f "tokens=2 delims==" %%a in ('wmic OS Get localdatetime /value') do @set "dt=%%a"
-@set "yy=%dt:~2,2%" &@set "yyyy=%dt:~0,4%" &@set "mo=%dt:~4,2%" & @set "dd=%dt:~6,2%"
+@set "yy=%dt:~2,2%" &@set "yyyy=%dt:~0,4%" &@set "mo=%dt:~4,2%" &@set "dd=%dt:~6,2%"
 @set "hh=%dt:~8,2%" &@set  "mm=%dt:~10,2%" &@set "ss=%dt:~12,2%"
 @set  dt=%yyyy%-%mo%-%dd%T%hh%%mm%%ss%
 @set dt_=%yyyy%-%mo%-%dd%-%hh%%mm%%ss%
@@ -140,6 +142,15 @@
 @for %%i in ("%~dp8\.") do @set "parent8=%%~nxi"
 @for %%i in ("%~dp9\.") do @set "parent9=%%~nxi"
 
+::!--- extras
+@set PRNFILE=%dp1%workdir\%@%-%n1%%x1%-%dt%.prn
+@rem @set HideScript=/HideScript
+@set pppp=%@:~5,4%
+@set Ppppp=-P%pppp%
+@set page=-PH:32767 -PW:255
+@set args=%Ppppp% %page% /Command /CloseWhenDone /Minimize /NoSplash /Start %HideScript% /High -Sworkdir "%wd%" -S"%wd%"
+@set add2script=pageheight=32767
+
 @goto :eof &::! --- CLI parameters:
 Voyager.exe scriptfile [-Ppppp] [-PH:pageheight] [-PW:pagewidth] [-Sworkdir] [-Irunid] [/Start] [/StartTime:hhmm] [/EmailOn] [/NotifyOn] [/ViewPrint] [/Hide] [/High] [/Wait] [/WinLeft:xx] [/WinTop:xx] [/WinWidth:xx] [/WinHeight:xx]
 
@@ -182,7 +193,7 @@ Command line options:
 As the Cube Voyager job is executing, periodic messages will be written to the Cube Voyager run dialog if /Hide is not on. Pressing Ctrl-Break can be normally used to prematurely terminate the run if the run dialog has been hidden. Otherwise, the Abort button on the Cube Voyager run dialog can be used. When the Cube Voyager job is completed, control will return to the windows command line interpreter.
 
 
-::!--- misc:
+::!--- misc
 /DEBUG
 /DEBUGCT
 /LANGUAGEEXTRACT option can only be done in Admin mode or in a non-protected folder

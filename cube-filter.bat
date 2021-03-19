@@ -5,7 +5,7 @@ set @=%~n0 &call "%~dp0cube-p" %*
 
 VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::███████*/ %add2script%
 
 ;RUN PGM=MATRIX
   ;;get 1st 5 data fields as numeric fields and also as character fields

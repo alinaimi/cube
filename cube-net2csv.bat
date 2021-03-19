@@ -11,19 +11,23 @@ VOYAGER "%~dpnx0" %args%
 @type "%dpn1%-link.tmp" > "%dpn1%-link.csv"
 @del /a /f /q "%dpn1%-link.tmp"
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::------------------------------------------------------------------------*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::-------*/ %add2script%
+
+// distribute intrastep=t multistep=t
+DistributeMULTISTEP ProcessID='all', ProcessNum=1
 
 RUN PGM=NETWORK     ; Unbuild network into dbf's
-FILEI NETI[1] = "%dpnx1%"
-;, TRIPSXY = "%dpnx2%" ;! dat, gdb, ...
-
-FILEO NODEO = "%dpn1%-node.dbf", FORMAT = DBF 
-FILEO LINKO = "%dpn1%-link.dbf", FORMAT = DBF; INCLUDE = %headers%
-
+// distributeIntrastep processId='all', ProcessList=1
+  FILEI NETI = "%dpnx1%"
+  FILEO NODEO = "%dpn1%-node.dbf", FORMAT = DBF; options: CSV DBF ...
+  FILEO LINKO = "%dpn1%-link.dbf", FORMAT = DBF; INCLUDE = %headers%
 ENDRUN
 
-RUN PGM = NETWORK     ; Unbuild network into dbf's
+RUN PGM = NETWORK
+// distributeIntrastep processId='all', ProcessList=2
 FILEI NETI[1] = "%dpnx1%"
 FILEO NODEO   = "%dpn1%-node.csv", FORMAT = CSV
 FILEO LINKO   = "%dpn1%-link.csv", FORMAT = CSV, INCLUDE = %headers%
 ENDRUN
+
+ENDDistributeMULTISTEP

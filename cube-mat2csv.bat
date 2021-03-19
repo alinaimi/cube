@@ -4,8 +4,8 @@ set zones=3722
 set zones=5996
 
 :: todo: get table names automatically from MATI, use loop
-::FOR /L %%I IN (1,1,10) DO (
-set mtx=%%I
+@rem FOR /L %%I IN (1,1,10) DO (
+@rem set mtx=%%I
 
 set mtx=1
 set tbname=SOV
@@ -32,9 +32,8 @@ set mtx=6
 set tbname=APV
 start VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/ %add2script%
 
-;print file="%dp1%\workdir\%@%-%n1%%x1%-%dt%.log", list='1:\t%dpnx1% (overrides, higher priority)\n2:\t%dpnx2%\n\nout:\t%dpn1%-%mtx%.csv\n\n',' ',X(6.0)
 RUN PGM=MATRIX PRNFILE="%dp1%\workdir\%@%-%n1%%x1%-%dt%.PRN" MSG='Convert MAT back to Original CSV Format'
 
 tbname=str(%mtx%,2,0)

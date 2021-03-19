@@ -14,10 +14,9 @@ set mat2_size=2
 start VOYAGER "%~dpnx0" %args%
 
 set s1=0
-@%SystemRoot%\System32\timeout 10 &goto:eof&::████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::████████████████████████████*/ %add2script%
 
-print             file="%dp1%\workdir\%@%-%n1%%x1%-%dt%.log", list='1:\t%dpnx1% (overrides, higher priority)\n2:\t%dpnx2%\n\nout:\t\n\n'
-RUN PGM=MATRIX PRNFILE="%dp1%\workdir\%@%-%n1%%x1%-%dt%.PRN"
+RUN PGM=MATRIX PRNFILE="%PRNFILE%"
 
   FILEI MATI[1]="%dpnx1%"
   ;IF(%two_files%==1)

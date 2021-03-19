@@ -8,7 +8,7 @@ set max_cat=50
 
 start VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::███████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::████████*/ %add2script%
 
 RUN PGM=MATRIX PRNFILE = "%@%-%n1%%x1%-%dt%.PRN"
   zones=1

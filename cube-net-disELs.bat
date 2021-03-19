@@ -3,7 +3,7 @@ set @=%~n0 &call "%~dp0cube-p" %*
 
 VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::███████████████████████*/ %add2script%
 
 print file="%dp1%\workdir\%@%-%n1%%x1%-%dt%.log", list='%dpnx1%',' ','@ali@',X(6.0)
 

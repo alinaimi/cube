@@ -11,7 +11,7 @@ set scenar=2019_Base
 
 start VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::█████████████████████████████████*/ %add2script%
 
 itr='%itr%'
 print file="%dp1%\workdir\%@%-%n1%%x1%-%dt%.log", list='1:\t%dpnx1% (overrides, higher priority)\n2:\t%dpnx2%\n\nout:\t\n\n',' ','@al_o@',X(6.0)

@@ -11,7 +11,7 @@ cscript //nologo //e:javascript "%~dpnx0" "%dp1%workdir\%n1%-%hdr.csv" %*
 @echo --- %n2% - %n1% (main remains %n1%)
 VOYAGER "%dp1%workdir\cube-diff.s" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:EOF &::███████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:EOF &::████████*/ %add2script%
 
 ////!--- 2) generate diff cube script from headers
 //GOTO EOF ;//███████ JScript */
