@@ -1,5 +1,5 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0 &call "%~dp0cube-p" %*
 set mtx=2
 set mat1_size=13
 set mat2_size=2

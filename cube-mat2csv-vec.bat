@@ -1,5 +1,5 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0 &call "%~dp0cube-p" %*
 set zones=3722
 set mtx=2
 @echo --- converting "%dpnx1%" to "csv"

@@ -1,5 +1,5 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0 &call "%~dp0cube-p" %*
 
 @echo --- shortest Path %nx1%
 
