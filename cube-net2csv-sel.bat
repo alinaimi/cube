@@ -1,8 +1,8 @@
 /*
-set @=%~n0&call "%~dp0cube-p" %*
+set @=%~f0&call "%~dp0cube-p" %*
 
 @rem @del /a /f /q "%wd%\%pppp%*.prn"
-@del /a /f /q "%wd%\TPPL.PRJ" &::! to prevent reseting the counter
+@del /a /f /q "%wd%\TPPL.PRJ" &::! to prevent resetting the counter
 
 @set link_a=22500,23013,35631,23603
 @set link_b=23014,34001,23604,35630

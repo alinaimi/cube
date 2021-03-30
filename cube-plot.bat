@@ -1,5 +1,5 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0&call "%~dp0cube-p" %*
 set zones=3722
 set mtx=1
 @set al_o=%~dpn1.plt.pdf
@@ -7,10 +7,10 @@ set mtx=1
 
 start VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::█████████████████�??*/ %add2script%
 
 ;This sample illustrates various capabilities of plotting.
-RUN PGM=NETWORK PRNFILE="%dp1%\workdir\%@%-%n1%%x1%-%dt%.PRN"
+RUN PGM=NETWORK PRNFILE="%PRNFILE%"
 NETI = "%dpnx1%"
 PLOTTER { ; SETUP Plotter
 DEVICE="Microsoft Print to PDF"

@@ -1,3 +1,10 @@
+::! dissagregate file name. i.e.: @:[C:/users/ali.txt] @_div:[C:] @_pth:[/users/] @_nam:[ali] @_ext:[.txt]
+@for %%i in ("%@%") do @(
+  @set @_div=%%~di
+  @set @_pth=%%~pi
+  @set @_nam=%%~ni
+  @set @_ext=%%~xi
+)
 @echo on &@cls &@color 3F&@TITLE %@% %* &@echo -- %~dp0%@% %*
 
 ::!--- setting up the paths

@@ -1,11 +1,11 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0&call "%~dp0cube-p" %*
 
 start VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::██████████████████████████████████████████████████████*/
+@%SystemRoot%\System32\timeout 10 &goto:eof&::█████████████████�??*/ %add2script%
 
-print file="%dp1%\workdir\%@%-%n1%%x1%-%dt%.log", list='1:\t%dpnx1% (overrides, higher priority)\n2:\t%dpnx2%\n\nout:\t%al_o%\n\n',' ','@al_o@',X(6.0)
+// print file="%dp1%workdir\%@%-%n1%%x1%-%dt%.log", list='1:\t%dpnx1% (overrides, higher priority)\n2:\t%dpnx2%\n\nout:\t%al_o%\n\n',' ','@al_o@',X(6.0)
 RUN PGM=MATRIX
 FILEI MATI      = "%dpnx1%"
 FILEO PRINTO[1] = out_vec.csv

@@ -1,4 +1,4 @@
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0&call "%~dp0cube-p" %*
 
 @echo dpnx0: %dpnx0%
 @echo dpnx1: %dpnx1%

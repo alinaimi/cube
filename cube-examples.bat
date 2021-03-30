@@ -1,5 +1,5 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
+set @=%~f0&call "%~dp0cube-p" %*
 set dis_veh_end=6 &::mtx_dis_veh
 set trp_fac_beg=8 &set trp_fac_end=8 &::mtx_trp_fac
 set max_cat=50

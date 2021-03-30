@@ -1,18 +1,30 @@
 /*
-set @=%~n0 &call "%~dp0cube-p" %*
-@set al_o=%~dpn1-csv2mat%~n2%~x1
+set @=%~f0&call "%~dp0cube-p" %*
 
 set zones=3722
 VOYAGER "%~dpnx0" %args%
 
 @%SystemRoot%\System32\timeout 10 &goto:eof&::------------------------------------------------------------------------*/
 
-print file="%dp1%\workdir\%@%-%n1%%x1%-%dt%.log", list='1:\t%dpnx1% (overrides, higher priority)\n2:\t%dpnx2%\n\nout:\t%al_o%\n\n',' ','@al_o@',X(6.0)
-RUN PGM=MATRIX PRNFILE="%dp1%\workdir\%@%-%n1%%x1%-%dt%.PRN"
+sum=0
 
-FILEI MATI="%dpnx1%"  PATTERN=IJ:V  FIELDS=#1-{zones}
-FILEO MATO="%al_o%", mo=1, DEC=6
-PAR  ZONES=%zones%
-mw[1]=mi.1.1
+// vector to mat
+Run pgm=MATRIX PRNFILE="%PRNFILE%"
+  FILEI MATI[1] = "%dpnx1%", PATTERN=IJ:V FIELDS=#1,2,3
+  //FILEI MATI[1] = "%dpnx1%", PATTERN=IJ:V, FIELDS=#1,0,2-4, SKIPRECS =1
+  FILEO MATO[1]="%dpn1%-%@%.mat", mo=1, DEC=2 ;// , MO=1 NAME=TRIPS , mo=1, DEC=2
+  PAR  ZONES=%zones%
+  ZONES=%zones%
 
-ENDRUN
+  mw[1]=mi.1.1
+  //sum=sum+mi.1.1
+EndRun
+
+// matrix to mat
+Run pgm=MATRIX MSG='Convert CSV in matrix format into .MAT'
+  FILEI MATI[1] = "%dpnx1%", PATTERN=IJ:V, FIELDS=#1,0,2-4, SKIPRECS =1
+  FILEO MATO[1] = "%dpn1%-%@%-2d.mat", MO=1
+
+  ZONES=%zones%
+  MW[1]=MI.1.1
+EndRun
