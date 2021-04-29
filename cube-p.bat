@@ -1,11 +1,19 @@
 ::! dissagregate file name. i.e.: @:[C:/users/ali.txt] @_div:[C:] @_pth:[/users/] @_nam:[ali] @_ext:[.txt]
+::! @:[C:\Windows\ali.txt] @d:[C:] @p:[\Windows\] @n:[ali] @x:[.txt]
 @for %%i in ("%@%") do @(
-  @set @_div=%%~di
+  @set @d=%%~di
+  @set @p=%%~pi
+  @set @n=%%~ni
+  @set @x=%%~xi
+
+  @set @_drv=%%~di
   @set @_pth=%%~pi
   @set @_nam=%%~ni
+  @rem @set @_nam_=%@_nam:~4,99%
   @set @_ext=%%~xi
 )
-@echo on &@cls &@color 3F&@TITLE %@% %* &@echo -- %~dp0%@% %*
+@set @_nam_=%@_nam:~5,99%
+@set @x_=%@x:.=%&@echo on &@color 3F &@title %@_nam% [%*] &@cls/&@echo -- %@_nam% "%*"
 
 ::!--- setting up the paths
 @set path=
@@ -19,14 +27,29 @@
 
 @for /f "tokens=2" %%a in ('tasklist^|find /i "cube.exe"') do @(@set pid_cube=%%a)
 
-@cd/d "%~dp1"
+@rem setlocal
+@if NOT [%1]==[] @(
+  @cd/d "%~dp1"
+  @set parent1=%~dp1
+  @for %%a in ("%1") do @for %%b in ("%%~dpa\.") do @set "parent1_n=%%~nxb"
+
+  @for %%a in ("%parent1:~0,-1%") do @(
+    @for %%b in ("%%~dpa\.") do @set "grandparent1_n=%%~nxb"
+  )
+)
+@if NOT [%2]==[] @(
+  @set parent2=%~dp2
+  @for %%a in ("%2") do @for %%b in ("%%~dpa\.") do @set "parent2_n=%%~nxb"
+
+  @for %%a in ("%parent2:~0,-1%") do @(
+    @for %%b in ("%%~dpa\.") do @set "grandparent2_n=%%~nxb"
+  )
+)
 
 @set wd=%~dp1workdir
-@if [%~dp1]==[] @set wd=%~dp0workdir
-@IF NOT EXIST "%wd%" (@md "%wd%")
-
-@for %%a in ("%1") do @for %%b in ("%%~dpa\.") do @set "parent1=%%~nxb"
-@for %%a in ("%2") do @for %%b in ("%%~dpa\.") do @set "parent2=%%~nxb"
+@if [%1]==[] @set wd=%~dp0workdir
+@if NOT EXIST "%wd%" (@md "%wd%")
+@set reset_rpt=@if EXIST "%wd%\TPPL.PRJ" (@del /a /f /q "%wd%\TPPL.PRJ") &::! to prevent resetting the counter
 
 ::!--- Getting Local Date/Time
 @rem @call dt
@@ -39,6 +62,17 @@
 @set dt2=%yyyy%-%mo%-%dd%-%hh%-%mm%-%ss%
 
 ::!--- arguments
+@set f0=%~f0
+@set f1=%~f1
+@set f2=%~f2
+@set f3=%~f3
+@set f4=%~f4
+@set f5=%~f5
+@set f6=%~f6
+@set f7=%~f7
+@set f8=%~f8
+@set f9=%~f9
+
 @set d0=%~d0
 @set d1=%~d1
 @set d2=%~d2
@@ -82,6 +116,17 @@
 @set x7=%~x7
 @set x8=%~x8
 @set x9=%~x9
+
+@set "x0_=%x0:.=%"
+@set "x1_=%x1:~1%"
+@set "x2_=%x2:~1%"
+@set "x3_=%x3:~1%"
+@set "x4_=%x4:~1%"
+@set "x5_=%x5:~1%"
+@set "x6_=%x6:~1%"
+@set "x7_=%x7:~1%"
+@set "x8_=%x8:~1%"
+@set "x9_=%x9:~1%"
 
 @set nx0=%~nx0
 @set nx1=%~nx1
@@ -139,8 +184,8 @@
 @set dpnx9=%~dpnx9
 
 @for %%i in ("%~dp0\.") do @set "parent0=%%~nxi"
-@for %%i in ("%~dp1\.") do @set "parent1=%%~nxi"
-@for %%i in ("%~dp2\.") do @set "parent2=%%~nxi"
+@for %%i in ("%~dp1\.") do @set "parent1_n=%%~nxi"
+@for %%i in ("%~dp2\.") do @set "parent2_n=%%~nxi"
 @for %%i in ("%~dp3\.") do @set "parent3=%%~nxi"
 @for %%i in ("%~dp4\.") do @set "parent4=%%~nxi"
 @for %%i in ("%~dp5\.") do @set "parent5=%%~nxi"
