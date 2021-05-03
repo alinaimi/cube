@@ -6,16 +6,16 @@ set e=1290000
 set n=550000
 set s=485000
 
-@del /a /f /q "%wd%\TPPL.PRJ" &::! to prevent resetting the counter
+%reset_rpt%
 
 VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::█████████████████�??*/ %add2script%
+@call "%~dp0cube-q" %*&goto:eof&::█████████████████�??*/ %add2script%
 
 buf=10000
 
 RUN PGM=NETWORK
-  NETI = "%dpnx1%"
+  NETI = "%f1%"
   NETO = "%dpn1%-trimmed.net"
 
   if ( %w% > a.x || a.x > %e% ) DELETE; // li.yMid

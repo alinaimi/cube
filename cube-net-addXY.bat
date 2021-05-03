@@ -4,7 +4,7 @@ set @=%~f0&call "%~dp0cube-p" %*
 %reset_rpt%
 VOYAGER "%~dpnx0" %args%
 
-@%SystemRoot%\System32\timeout 10 &goto:eof&::-------------------*/ %add2script%
+@call "%~dp0cube-q" %*&goto:eof&::-------------------*/ %add2script%
 
 RUN PGM=NETWORK
   FILEI NETI[1] = "%f1%"
