@@ -1,5 +1,6 @@
 ::! dissagregate file name. i.e.: @:[C:/users/ali.txt] @_div:[C:] @_pth:[/users/] @_nam:[ali] @_ext:[.txt]
 ::! @:[C:\Windows\ali.txt] @d:[C:] @p:[\Windows\] @n:[ali] @x:[.txt]
+@if [%@%]==[] @set @=-
 @for %%i in ("%@%") do @(
   @set @d=%%~di
   @set @p=%%~pi
@@ -13,7 +14,9 @@
   @set @_ext=%%~xi
 )
 @set @_nam_=%@_nam:~5,99%
-@set @x_=%@x:.=%&@echo on &@color 3F &@title %@_nam% [%*] &@cls/&@echo -- %@_nam% "%*"
+@set @x_=%@x:.=%
+@echo on &@color 3F
+@title %@_nam% [%*] &@cls &@echo -- %@_nam% "%*"
 
 ::!--- setting up the paths
 @set path=
@@ -24,6 +27,11 @@
 @echo %path%|%SystemRoot%\System32\find /i "%SystemRoot%\System32"                   >nul||@path %SystemRoot%\System32;%SystemRoot%\System32\wbem;%path%
 @echo %path%|%SystemRoot%\System32\find /i      "%ProgramW6432%\Citilabs\CubeVoyager">nul||@path      %ProgramW6432%\Citilabs\CubeVoyager;%path%
 @echo %path%|%SystemRoot%\System32\find /i "%ProgramFiles(x86)%\Citilabs\CubeVoyager">nul||@path %ProgramFiles(x86)%\Citilabs\CubeVoyager;%path%
+::! point to Git location
+@set gitdir=%COMMANDER_PATH%\addon\sci\coding\vcs\Git
+@if [%gitdir%]==[] @set gitdir=%COMMANDER_PATH%\addon\sci\coding\vcs\Git
+@if EXIST "%gitdir%\usr\bin" @path %gitdir%\usr\bin;%path%
+@path %COMMANDER_PATH%\addon\sci\coding\vcs\Git;%path%
 
 @for /f "tokens=2" %%a in ('tasklist^|find /i "cube.exe"') do @(@set pid_cube=%%a)
 
@@ -37,6 +45,7 @@
     @for %%b in ("%%~dpa\.") do @set "grandparent1_n=%%~nxb"
   )
 )
+
 @if NOT [%2]==[] @(
   @set parent2=%~dp2
   @for %%a in ("%2") do @for %%b in ("%%~dpa\.") do @set "parent2_n=%%~nxb"
@@ -50,6 +59,9 @@
 @if [%1]==[] @set wd=%~dp0workdir
 @if NOT EXIST "%wd%" (@md "%wd%")
 @set reset_rpt=@if EXIST "%wd%\TPPL.PRJ" (@del /a /f /q "%wd%\TPPL.PRJ") &::! to prevent resetting the counter
+
+::!--- colect some file information
+@call "%~dp0cube-inf" "%~f1"
 
 ::!--- Getting Local Date/Time
 @rem @call dt
@@ -203,7 +215,7 @@
 @set args=%Ppppp% %page% /Command /CloseWhenDone /Minimize /NoSplash /Start %HideScript% /High -Sworkdir "%wd%" -S"%wd%"
 @set add2script=pageheight=32767
 
-@goto :eof &::! --- CLI parameters:
+@goto :eof &::!--- CLI parameters:
 Voyager.exe scriptfile [-Ppppp] [-PH:pageheight] [-PW:pagewidth] [-Sworkdir] [-Irunid] [/Start] [/StartTime:hhmm] [/EmailOn] [/NotifyOn] [/ViewPrint] [/Hide] [/High] [/Wait] [/WinLeft:xx] [/WinTop:xx] [/WinWidth:xx] [/WinHeight:xx]
 
 Command line parameters:
