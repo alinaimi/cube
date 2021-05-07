@@ -74,140 +74,41 @@
 @set dt2=%yyyy%-%mo%-%dd%-%hh%-%mm%-%ss%
 
 ::!--- arguments
-@set f0=%~f0
-@set f1=%~f1
-@set f2=%~f2
-@set f3=%~f3
-@set f4=%~f4
-@set f5=%~f5
-@set f6=%~f6
-@set f7=%~f7
-@set f8=%~f8
-@set f9=%~f9
+@set f0=%~f0&@set d0=%~d0&@set p0=%~p0&@set n0=%~n0&@set x0=%~x0&@set arg0=%0
+@set f1=%~f1&@set d1=%~d1&@set p1=%~p1&@set n1=%~n1&@set x1=%~x1&@set arg1=%1
+@set f2=%~f2&@set d2=%~d2&@set p2=%~p2&@set n2=%~n2&@set x2=%~x2&@set arg2=%2
+@set f3=%~f3&@set d3=%~d3&@set p3=%~p3&@set n3=%~n3&@set x3=%~x3&@set arg3=%3
+@set f4=%~f4&@set d4=%~d4&@set p4=%~p4&@set n4=%~n4&@set x4=%~x4&@set arg4=%4
+@set f5=%~f5&@set d5=%~d5&@set p5=%~p5&@set n5=%~n5&@set x5=%~x5&@set arg5=%5
+@set f6=%~f6&@set d6=%~d6&@set p6=%~p6&@set n6=%~n6&@set x6=%~x6&@set arg6=%6
+@set f7=%~f7&@set d7=%~d7&@set p7=%~p7&@set n7=%~n7&@set x7=%~x7&@set arg7=%7
+@set f8=%~f8&@set d8=%~d8&@set p8=%~p8&@set n8=%~n8&@set x8=%~x8&@set arg8=%8
+@set f9=%~f9&@set d9=%~d9&@set p9=%~p9&@set n9=%~n9&@set x9=%~x9&@set arg9=%9
+set "x0_=%x0:.=%"
+@set x0_=%x0:~1%&@set nx0=%~nx0&@set dp0=%~dp0&@set dpn0=%~dpn0&@set dpnx0=%~dpnx0
+@set x1_=%x1:~1%&@set nx1=%~nx1&@set dp1=%~dp1&@set dpn1=%~dpn1&@set dpnx1=%~dpnx1
+@set x2_=%x2:~1%&@set nx2=%~nx2&@set dp2=%~dp2&@set dpn2=%~dpn2&@set dpnx2=%~dpnx2
+@set x3_=%x3:~1%&@set nx3=%~nx3&@set dp3=%~dp3&@set dpn3=%~dpn3&@set dpnx3=%~dpnx3
+@set x4_=%x4:~1%&@set nx4=%~nx4&@set dp4=%~dp4&@set dpn4=%~dpn4&@set dpnx4=%~dpnx4
+@set x5_=%x5:~1%&@set nx5=%~nx5&@set dp5=%~dp5&@set dpn5=%~dpn5&@set dpnx5=%~dpnx5
+@set x6_=%x6:~1%&@set nx6=%~nx6&@set dp6=%~dp6&@set dpn6=%~dpn6&@set dpnx6=%~dpnx6
+@set x7_=%x7:~1%&@set nx7=%~nx7&@set dp7=%~dp7&@set dpn7=%~dpn7&@set dpnx7=%~dpnx7
+@set x8_=%x8:~1%&@set nx8=%~nx8&@set dp8=%~dp8&@set dpn8=%~dpn8&@set dpnx8=%~dpnx8
+@set x9_=%x9:~1%&@set nx9=%~nx9&@set dp9=%~dp9&@set dpn9=%~dpn9&@set dpnx9=%~dpnx9
 
-@set d0=%~d0
-@set d1=%~d1
-@set d2=%~d2
-@set d3=%~d3
-@set d4=%~d4
-@set d5=%~d5
-@set d6=%~d6
-@set d7=%~d7
-@set d8=%~d8
-@set d9=%~d9
-
-@set p0=%~p0
-@set p1=%~p1
-@set p2=%~p2
-@set p3=%~p3
-@set p4=%~p4
-@set p5=%~p5
-@set p6=%~p6
-@set p7=%~p7
-@set p8=%~p8
-@set p9=%~p9
-
-@set n0=%~n0
-@set n1=%~n1
-@set n2=%~n2
-@set n3=%~n3
-@set n4=%~n4
-@set n5=%~n5
-@set n6=%~n6
-@set n7=%~n7
-@set n8=%~n8
-@set n9=%~n9
-
-@set x0=%~x0
-@set x1=%~x1
-@set x2=%~x2
-@set x3=%~x3
-@set x4=%~x4
-@set x5=%~x5
-@set x6=%~x6
-@set x7=%~x7
-@set x8=%~x8
-@set x9=%~x9
-
-@set "x0_=%x0:.=%"
-@set "x1_=%x1:~1%"
-@set "x2_=%x2:~1%"
-@set "x3_=%x3:~1%"
-@set "x4_=%x4:~1%"
-@set "x5_=%x5:~1%"
-@set "x6_=%x6:~1%"
-@set "x7_=%x7:~1%"
-@set "x8_=%x8:~1%"
-@set "x9_=%x9:~1%"
-
-@set nx0=%~nx0
-@set nx1=%~nx1
-@set nx2=%~nx2
-@set nx3=%~nx3
-@set nx4=%~nx4
-@set nx5=%~nx5
-@set nx6=%~nx6
-@set nx7=%~nx7
-@set nx8=%~nx8
-@set nx9=%~nx9
-
-@set arg0=%0
-@set arg1=%1
-@set arg2=%2
-@set arg3=%3
-@set arg4=%4
-@set arg5=%5
-@set arg6=%6
-@set arg7=%7
-@set arg8=%8
-@set arg9=%9
-
-@set dp0=%~dp0
-@set dp1=%~dp1
-@set dp2=%~dp2
-@set dp3=%~dp3
-@set dp4=%~dp4
-@set dp5=%~dp5
-@set dp6=%~dp6
-@set dp7=%~dp7
-@set dp8=%~dp8
-@set dp9=%~dp9
-
-@set dpn0=%~dpn0
-@set dpn1=%~dpn1
-@set dpn2=%~dpn2
-@set dpn3=%~dpn3
-@set dpn4=%~dpn4
-@set dpn5=%~dpn5
-@set dpn6=%~dpn6
-@set dpn7=%~dpn7
-@set dpn8=%~dpn8
-@set dpn9=%~dpn9
-
-@set dpnx0=%~dpnx0
-@set dpnx1=%~dpnx1
-@set dpnx2=%~dpnx2
-@set dpnx3=%~dpnx3
-@set dpnx4=%~dpnx4
-@set dpnx5=%~dpnx5
-@set dpnx6=%~dpnx6
-@set dpnx7=%~dpnx7
-@set dpnx8=%~dpnx8
-@set dpnx9=%~dpnx9
-
-@for %%i in ("%~dp0\.") do @set "parent0=%%~nxi"
+@for %%i in ("%~dp0\.") do @set "parent0_n=%%~nxi"
 @for %%i in ("%~dp1\.") do @set "parent1_n=%%~nxi"
 @for %%i in ("%~dp2\.") do @set "parent2_n=%%~nxi"
-@for %%i in ("%~dp3\.") do @set "parent3=%%~nxi"
-@for %%i in ("%~dp4\.") do @set "parent4=%%~nxi"
-@for %%i in ("%~dp5\.") do @set "parent5=%%~nxi"
-@for %%i in ("%~dp6\.") do @set "parent6=%%~nxi"
-@for %%i in ("%~dp7\.") do @set "parent7=%%~nxi"
-@for %%i in ("%~dp8\.") do @set "parent8=%%~nxi"
-@for %%i in ("%~dp9\.") do @set "parent9=%%~nxi"
+@for %%i in ("%~dp3\.") do @set "parent3_n=%%~nxi"
+@for %%i in ("%~dp4\.") do @set "parent4_n=%%~nxi"
+@for %%i in ("%~dp5\.") do @set "parent5_n=%%~nxi"
+@for %%i in ("%~dp6\.") do @set "parent6_n=%%~nxi"
+@for %%i in ("%~dp7\.") do @set "parent7_n=%%~nxi"
+@for %%i in ("%~dp8\.") do @set "parent8_n=%%~nxi"
+@for %%i in ("%~dp9\.") do @set "parent9_n=%%~nxi"
 
 ::!--- extras
-@set PRNFILE=%dp1%workdir\%@%-%n1%%x1%-%dt%.prn
+@set PRNFILE=%dp1%workdir\%@n%-%n1%%x1%-%dt%.prn
 @rem @set HideScript=/HideScript
 @set pppp=%@:~5,4%
 @set Ppppp=-P%pppp%
