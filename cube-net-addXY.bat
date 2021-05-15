@@ -2,7 +2,7 @@
 set @=%~f0&call "%~dp0cube-p" %*
 
 %reset_rpt%
-VOYAGER "%~dpnx0" %args%
+VOYAGER "%~f0" %args%
 
 @call "%~dp0cube-q" %*&goto:eof&::-------------------*/ %add2script%
 
@@ -19,7 +19,4 @@ RUN PGM=NETWORK
   BX=B.X
   BY=B.Y
 
-  // PROCESS PHASE=LINKMERGE
-    // IF (1==1) PRINT CSV=T, LIST=A.X(6.0),A.Y(6.0) Printo=1
-  // ENDPROCESS
 ENDRUN
