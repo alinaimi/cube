@@ -18,6 +18,10 @@
 @echo on &@color 3F
 @title %@_nam% [%*] &@cls &@echo -- %@_nam% "%*"
 
+::!--- get Cube PID
+@for /f "tokens=2" %%a in ('C:/Windows/System32/tasklist.exe^|find "cube.exe" /i') do @(@set pid_cube=%%a)
+@rem @for /f "tokens=2" %%a in ('tasklist.exe^|find "cube.exe" /i') do @(@set pid_cube=%%a&@echo pid_cube: %%a)
+
 ::!--- setting up the paths
 @set path=
 @rem @setlocal EnableDelayedExpansion :: cause path doesn't transfer to other bash files
@@ -33,10 +37,10 @@
 @if EXIST "%gitdir%\usr\bin" @path %gitdir%\usr\bin;%path%
 @path %COMMANDER_PATH%\addon\sci\coding\vcs\Git;%path%
 
-@for /f "tokens=2" %%a in ('tasklist^|find /i "cube.exe"') do @(@set pid_cube=%%a)
-
+@set argc=0
 @rem setlocal
 @if NOT [%1]==[] @(
+  @set argc=1
   @cd/d "%~dp1"
   @set parent1=%~dp1
   @for %%a in ("%1") do @for %%b in ("%%~dpa\.") do @set "parent1_n=%%~nxb"
@@ -47,6 +51,7 @@
 )
 
 @if NOT [%2]==[] @(
+  @set argc=2
   @set parent2=%~dp2
   @for %%a in ("%2") do @for %%b in ("%%~dpa\.") do @set "parent2_n=%%~nxb"
 
@@ -55,13 +60,25 @@
   )
 )
 
+@if NOT [%3]==[] @set argc=3
+@if NOT [%4]==[] @set argc=4
+@if NOT [%5]==[] @set argc=5
+@if NOT [%6]==[] @set argc=6
+@if NOT [%7]==[] @set argc=7
+@if NOT [%8]==[] @set argc=8
+@if NOT [%9]==[] @set argc=9
+
 @set wd=%~dp1workdir
 @if [%1]==[] @set wd=%~dp0workdir
 @if NOT EXIST "%wd%" (@md "%wd%")
 @set reset_rpt=@if EXIST "%wd%\TPPL.PRJ" (@del /a /f /q "%wd%\TPPL.PRJ") &::! to prevent resetting the counter
 
 ::!--- colect some file information
-@call "%~dp0cube-inf" "%~f1"
+@set get_inf=
+@if "%~x1"==".mat" @set get_inf=1
+@if "%~x1"==".net" @set get_inf=1
+@if "%~x1"==".vtt" @set get_inf=1
+@if "%get_inf%"=="1" @call "%~dp0cube-inf" "%~f1"
 
 ::!--- Getting Local Date/Time
 @rem @call dt
@@ -84,7 +101,7 @@
 @set f7=%~f7&@set d7=%~d7&@set p7=%~p7&@set n7=%~n7&@set x7=%~x7&@set arg7=%7
 @set f8=%~f8&@set d8=%~d8&@set p8=%~p8&@set n8=%~n8&@set x8=%~x8&@set arg8=%8
 @set f9=%~f9&@set d9=%~d9&@set p9=%~p9&@set n9=%~n9&@set x9=%~x9&@set arg9=%9
-set "x0_=%x0:.=%"
+@set "x0_=%x0:.=%"
 @set x0_=%x0:~1%&@set nx0=%~nx0&@set dp0=%~dp0&@set dpn0=%~dpn0&@set dpnx0=%~dpnx0
 @set x1_=%x1:~1%&@set nx1=%~nx1&@set dp1=%~dp1&@set dpn1=%~dpn1&@set dpnx1=%~dpnx1
 @set x2_=%x2:~1%&@set nx2=%~nx2&@set dp2=%~dp2&@set dpn2=%~dpn2&@set dpnx2=%~dpnx2
