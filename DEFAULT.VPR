@@ -30,8 +30,8 @@ ActiveLinkCalcGroup=0
 ActiveLinkColorGroup=3
 ActiveLinkPostGroup=15
 ActiveNodeCalcGroup=0
-ActiveNodeColorGroup=4
-ActiveNodePostGroup=5
+ActiveNodeColorGroup=5
+ActiveNodePostGroup=0
 ActiveSelectGroup=0
 AniColorAnd=1
 AniColorBySpeed=0
@@ -87,7 +87,7 @@ AniVSetNumColor=0
 AniVSetToColor=16711680
 BaseX=0
 BaseY=0
-BoundingBox=0,-271546.16878,1500309,748153
+BoundingBox=0,-271546,1500309,748153
 ClearLinkText=1
 ClearNodeText=0
 DefaultCentroidColor=8421504,0,0
@@ -103,15 +103,15 @@ FileName2=
 LayerMaxScale=0
 LayerMinScale=0
 LeftHandDrive=0
-LinkBand1_1=PP24VOL,-2,12400.1396,PP24VOL,16744703,18600.2094,14906111,37200.4188,13001983,55800.628,11163135,74400.8375,9324543,93001.0469,7420415,111601.2563,5581823,130201.4657,3742975,148801.675,1838847,167401.8844,255,186002.0938
-LinkBand12_1=S_I4AMSOV,-2,500,S_I4AMSOV,4259584,-8314.3233,4256000,-6685.5568,4252416,-5056.7903,4248832,-3428.0238,4245248,-1799.2573,4241408,-170.4908,4237824,1458.2757,4234240,3087.0422,4230656,4715.8087,4227072,6344.5752
-LinkBand12_2=S_I4AMSOV,-2,-500,S_I4AMSOV,4194432,-8314.3233,4656782,-6685.5568,5119132,-5056.7903,5581738,-3428.0238,6044088,-1799.2573,6571975,-170.4908,7034325,1458.2757,7496931,3087.0422,7959281,4715.8087,8421631,6344.5752
+LinkBand1_1=PP24VOL,-2,12400,PP24VOL,16744703,18600,14906111,37200,13001983,55800,11163135,74400,9324543,93001,7420415,111601,5581823,130201,3742975,148801,1838847,167401,255,186002
+LinkBand12_1=S_I4AMSOV,-2,500,S_I4AMSOV,4259584,-8314,4256000,-6685,4252416,-5056,4248832,-3428,4245248,-1799,4241408,-170,4237824,1458,4234240,3087,4230656,4715,4227072,6344
+LinkBand12_2=S_I4AMSOV,-2,-500,S_I4AMSOV,4194432,-8314,4656782,-6685,5119132,-5056,5581738,-3428,6044088,-1799,6571975,-170,7034325,1458,7496931,3087,7959281,4715,8421631,6344
 LinkBand12Key1=1,1
 LinkBand12Key2=1,1
 LinkBand12Key3=1,1
 LinkBand12Key4=1,1
-LinkBand13_1=S_I4AMHV3,-2,100,S_I4AMHV3,65280,-2566.5556,59904,-2089.6794,54528,-1612.8031,48896,-1135.9269,43520,-659.0506,38144,-182.1743,32768,294.7019,27136,771.5782,21760,1248.4544,16384,1725.3307
-LinkBand13_2=S_I4AMHV3,-2,-100,S_I4AMHV3,4194432,-2566.5556,4788366,-2089.6794,5382556,-1612.8031,6042026,-1135.9269,6635960,-659.0506,7230151,-182.1743,7824085,294.7019,8483555,771.5782,9077745,1248.4544,9671679,1725.3307
+LinkBand13_1=S_I4AMHV3,-2,100,S_I4AMHV3,65280,-2566,59904,-2089,54528,-1612,48896,-1135,43520,-659,38144,-182,32768,294,27136,771,21760,1248,16384,1725
+LinkBand13_2=S_I4AMHV3,-2,-100,S_I4AMHV3,4194432,-2566,4788366,-2089,5382556,-1612,6042026,-1135,6635960,-659,7230151,-182,7824085,294,8483555,771,9077745,1248,9671679,1725
 LinkBand13Key1=1,1
 LinkBand13Key2=1,1
 LinkBand13Key3=1,1
@@ -138,8 +138,8 @@ LinkBand1Key1=1,1
 LinkBand1Key2=1,1
 LinkBand1Key3=1,1
 LinkBand1Key4=1,1
-LinkBand2_1=I4AMTRK,-2,1000,I4AMTRK,16776960,362.3053,15854080,724.6105,14931200,1086.9158,14008064,1449.2211,13085184,1811.5264,12096768,2173.8316,11173888,2536.1369,10250752,2898.4422,9327872,3260.7474,8404992,3623.0527
-LinkBand2_2=I4AMTRK.R,-2,1000,I4AMTRK.R,8421631,362.3053,7500529,724.6105,6579427,1086.9158,5592533,1449.2211,4671431,1811.5264,3750328,2173.8316,2829226,2536.1369,1842332,2898.4422,921230,3260.7474,128,3623.0527
+LinkBand2_1=I4AMTRK,-2,1000,I4AMTRK,16776960,362,15854080,724,14931200,1087,14008064,1449,13085184,1811,12096768,2173,11173888,2536,10250752,2898,9327872,3260,8404992,3623
+LinkBand2_2=I4AMTRK.R,-2,1000,I4AMTRK.R,8421631,362,7500529,724,6579427,1087,5592533,1449,4671431,1811,3750328,2173,2829226,2536,1842332,2898,921230,3260,128,3623
 LinkBand2Key1=1,1
 LinkBand2Key2=1,1
 LinkBand2Key3=1,1
@@ -150,6 +150,11 @@ LinkBand3Key1=1,1
 LinkBand3Key2=1,1
 LinkBand3Key3=1,1
 LinkBand3Key4=1,1
+LinkBand6_1=V1_1,-2,100,V1_1,14346457,50,9568158,100,50745,200,43605,500,10477311,1000,6467839,2000,28895,5000,14790,10000,7395,20000,128,30000
+LinkBand6Key1=1,1
+LinkBand6Key2=1,1
+LinkBand6Key3=1,1
+LinkBand6Key4=1,1
 LinkBand7_1=V_2,-2,200,V_2,12615680,300,11235868,600,9790521,900,8410453,1200,7030641,1500,5585294,1800,4205482,2100,2825414,2400,1380067,2700,255,3000
 LinkBand7Key1=1,1
 LinkBand7Key2=1,1
@@ -163,6 +168,7 @@ LinkBandCenterColor15=8421504
 LinkBandCenterColor16=8421504
 LinkBandCenterColor2=8421504
 LinkBandCenterColor3=8421504
+LinkBandCenterColor6=8421504
 LinkBandCenterColor7=12615680
 LinkBandGroup1=pp24vol
 LinkBandGroup12=S_I4amSOV
@@ -172,6 +178,7 @@ LinkBandGroup15=S_TOLLGRP
 LinkBandGroup16=S_ AM TRK
 LinkBandGroup2=AM TRK
 LinkBandGroup3=SOV AM
+LinkBandGroup6=v_1
 LinkBandGroup7=v_2
 LinkBandMaxScale1=10
 LinkBandMaxScale12=0
@@ -181,6 +188,7 @@ LinkBandMaxScale15=0
 LinkBandMaxScale16=0
 LinkBandMaxScale2=0
 LinkBandMaxScale3=0
+LinkBandMaxScale6=0
 LinkBandMaxScale7=0
 LinkBandMinScale1=0
 LinkBandMinScale12=0
@@ -190,6 +198,7 @@ LinkBandMinScale15=0
 LinkBandMinScale16=0
 LinkBandMinScale2=0
 LinkBandMinScale3=0
+LinkBandMinScale6=0
 LinkBandMinScale7=0
 LinkBandQueueBarWidth1=-2
 LinkBandQueueBarWidth12=-2
@@ -199,6 +208,7 @@ LinkBandQueueBarWidth15=-2
 LinkBandQueueBarWidth16=-2
 LinkBandQueueBarWidth2=-2
 LinkBandQueueBarWidth3=-2
+LinkBandQueueBarWidth6=-2
 LinkBandQueueBarWidth7=-2
 LinkBandSelectStr1=PP24VOL
 LinkBandSelectStr12=S_I4amSOV < 0 || S_I4amSOV > 0
@@ -208,6 +218,7 @@ LinkBandSelectStr15=S_TOLLGRP < 0 || S_TOLLGRP > 0
 LinkBandSelectStr16=
 LinkBandSelectStr2=
 LinkBandSelectStr3=
+LinkBandSelectStr6=
 LinkBandSelectStr7=
 LinkCalc1_1=$delete=T
 LinkCalc2_1=capclass=11
@@ -235,6 +246,7 @@ LinkChartSizeStr15=
 LinkChartSizeStr16=
 LinkChartSizeStr2=
 LinkChartSizeStr3=
+LinkChartSizeStr6=
 LinkChartSizeStr7=
 LinkChartType1=0
 LinkChartType12=0
@@ -244,6 +256,7 @@ LinkChartType15=0
 LinkChartType16=0
 LinkChartType2=0
 LinkChartType3=0
+LinkChartType6=0
 LinkChartType7=0
 LinkColor1_1=8374655,0,3,SLID>0
 LinkColor1_10=14769456,0,3,SLID>0 && SLID<800
@@ -306,11 +319,12 @@ LinkColor2_3=8199109,0,5,screen =10
 LinkColor2_4=415923,0,3,screen = 20 || screen = 36
 LinkColor2_5=255,0,3,screen < 199 && screen >= 100
 LinkColor2_6=2200141,0,3,screen < 299 && screen >= 200
-LinkColor3_1=16269820,0,3,roadtype=4
-LinkColor3_2=12897403,0,3,roadtype=3
-LinkColor3_3=8922964,0,3,roadtype=2
-LinkColor3_4=255,0,3,roadtype=1
-LinkColor3_5=0,2,1,amlimit=9
+LinkColor3_1=12883442,0,2,atypeover = 0 && ftype = 1
+LinkColor3_2=4557603,0,2,amlane != pmlane & (amlane  !=1 || pmlane !=1)
+LinkColor3_3=8257966,0,2,ftype = 6
+LinkColor3_4=255,0,2,(amlimit != pmlimit) && amlane =1
+LinkColor3_5=1339628,0,2,ftype = 6 && atypeover !=0
+LinkColor3_6=8421504,2,1,amlimit  =9 && pmlimit = 9
 LinkColor4_1=12632256,2,1,ftype=0
 LinkColor4_2=9175276,0,5,ftype=1
 LinkColor4_3=13137662,0,4,ftype=5
@@ -334,18 +348,18 @@ LinkColor5_6=32767,0,3,corridor=4950
 LinkColor5_7=3407871,0,3,corridor=4951
 LinkColor5_8=2643622,0,3,corridor=4952
 LinkColor5_9=12550647,0,3,corridor=4953
-LinkColor6_1=7839259,0,3,int(gantryID/10000)=2000
-LinkColor6_10=7318525,0,3,int(gantryID/10000)=4953
-LinkColor6_11=7799162,0,3,int(gantryID/10000)=950
-LinkColor6_12=12883442,0,3,int(gantryID/10000)=951
-LinkColor6_2=155609,0,3,int(gantryID/10000)=2670
-LinkColor6_3=4424739,0,3,int(gantryID/10000)=2671
-LinkColor6_4=9054695,0,3,int(gantryID/10000)=660
-LinkColor6_5=2008678,0,3,int(gantryID/10000)=661
-LinkColor6_6=175078,0,3,int(gantryID/10000)=3950
-LinkColor6_7=1930918,0,3,int(gantryID/10000)=4950
-LinkColor6_8=6710886,0,3,int(gantryID/10000)=4951
-LinkColor6_9=12969844,0,3,int(gantryID/10000)=4952
+LinkColor6_1=8882055,2,1,AMLIMIT=9
+LinkColor6_10=12969844,0,3,int(gantryID/10000)=4952
+LinkColor6_11=7318525,0,3,int(gantryID/10000)=4953
+LinkColor6_12=7799162,0,3,int(gantryID/10000)=950
+LinkColor6_2=7839259,0,3,int(gantryID/10000)=2000
+LinkColor6_3=155609,0,3,int(gantryID/10000)=2670
+LinkColor6_4=4424739,0,3,int(gantryID/10000)=2671
+LinkColor6_5=9054695,0,3,int(gantryID/10000)=660
+LinkColor6_6=2008678,0,3,int(gantryID/10000)=661
+LinkColor6_7=175078,0,3,int(gantryID/10000)=3950
+LinkColor6_8=1930918,0,3,int(gantryID/10000)=4950
+LinkColor6_9=6710886,0,3,int(gantryID/10000)=4951
 LinkColor7_1=255,0,1,
 LinkColor7_2=7839259,0,1,Atype=6
 LinkColor7_3=155609,0,1,Atype=5
@@ -393,7 +407,7 @@ LinkColorPaletteIndex14=2
 LinkColorPaletteIndex15=33
 LinkColorPaletteIndex16=31
 LinkColorPaletteIndex2=3
-LinkColorPaletteIndex3=17
+LinkColorPaletteIndex3=18
 LinkColorPaletteIndex4=35
 LinkColorPaletteIndex5=29
 LinkColorPaletteIndex6=17
@@ -442,12 +456,12 @@ LinkOrderListValue14=
 LinkOrderListValue15=
 LinkOrderListValue16=
 LinkOrderListValue2=AMLANE,PMLANE,OPLANE
-LinkOrderListValue3=AMLIMIT,PMLIMIT,OPLIMIT
-LinkOrderListValue4=DISTANCE,FTYPE,AMLANE,PMLANE,OPLANE,AMLIMIT,PMLIMIT,OPLIMIT,ATYPEOVER,CORRIDOR,ROADTYPE,TOLLGRP,ATYPE
+LinkOrderListValue3=DISTANCE,FTYPE,AMLANE,PMLANE,OPLANE,AMLIMIT,PMLIMIT,OPLIMIT,ATYPEOVER,CORRIDOR,ROADTYPE,TOLLGRP,ATYPE
+LinkOrderListValue4=AMLIMIT,PMLIMIT,OPLIMIT,AMLANE,PMLANE,OPLANE
 LinkOrderListValue5=DISTANCE,FTYPE,AMLANE,PMLANE,OPLANE,AMLIMIT,PMLIMIT,OPLIMIT,ATYPEOVER,CORRIDOR,ROADTYPE,TOLLGRP,GANTRYID
 LinkOrderListValue6=PLAZAID
 LinkOrderListValue7=SCREEN
-LinkOrderListValue8=PP24VOL,I124VOL,I224VOL,I324VOL,I424VOL,I4AMSOV,I4AMHV2,I4AMHV3,I4AMCV,I4AMTRK,I4PMSOVTOLL,I4PMHV2TOLL,I4PMHV3TOLL,I4PMCVTOLL,I4PMTRKTOLL,I4N2SOVTOLL,I4N2HV2TOLL,I4N2HV3TOLL,I4N2CVTOLL,I4N2TRKTOLL,I424SOV,I424HV2,I424HV3,I424CV,I424TRK,S_I4AMSOV,S_I4AMTRK
+LinkOrderListValue8=I4AMSOV,I4AMHV2,I4AMHV3,I4AMCV,I4AMTRK,I4PMSOVTOLL,I4PMHV2TOLL,I4PMHV3TOLL,I4PMCVTOLL,I4PMTRKTOLL,I4N2SOVTOLL,I4N2HV2TOLL,I4N2HV3TOLL,I4N2CVTOLL,I4N2TRKTOLL,I424SOV,I424HV2,I424HV3,I424CV,I424TRK,I424VOL,I4N1SOV,I4M1SOV,I4M2SOV,I4PMSOV,I4N2SOV
 LinkOrderListValue9=AMTOLL,AMTOLL_VP,I4AMAPXTOLL,I4AMCVTOLL,I4AMHV2TOLL,I4AMHV3TOLL,I4AMSOVTOLL,MINTOLL,OPTOLL,OPTOLL_VP,PMTOLL,PMTOLL_VP,TOLL,TOLLDISTANCE,TOLLGRP,TOLL_DELTA_AM,TOLL_DELTA_PM,I4AMTRKTOLL
 LinkPopUpDisplayOrder=3
 LinkPost1_1=SLID,-1,0
@@ -460,12 +474,14 @@ LinkPost12_2=I4PMTRKTOLL,-1,0
 LinkPost13_1=S_I4AMSOV,-1,0
 LinkPost14_1=S_I4AMHV3,-1,0
 LinkPost15_1=I4AMTRK,12632256,0
+LinkPost15_2=PMLANE,32768,0
 LinkPost16_1=S_I4AMTRK,-1,0
+LinkPost16_2=FTYPE,32768,0
 LinkPost2_1=AMLANE,-1,0
 LinkPost2_2=I2AMFFSPD,-1,0
 LinkPost2_3=AMHRLNCAP,-1,0
-LinkPost3_1=I424VOL,8421376,0
-LinkPost3_2=I424VOL.R,4210816,0
+LinkPost3_1=I424VOL,V1_1,8421376,0
+LinkPost3_2=I424VOL.R,V1_1.R,4210816,0
 LinkPost4_1=FTYPE,-1,0
 LinkPost4_2=ATYPEOVER,255,0
 LinkPost4_3=ATYPE,13553358,0
@@ -476,9 +492,13 @@ LinkPost6_2=I4AMSOVTOLL,16776960,-2
 LinkPost6_3=I4PMSOVTOLL,4227327,-2
 LinkPost6_4=I4AMTRKTOLL,16744448,-2
 LinkPost7_1=OPLANE,-1,0
+LinkPost7_2=PMLANE,33023,0
+LinkPost7_3=OPLANE,0,0
 LinkPost8_1=DEG,-1,0
-LinkPost9_1=PLAZAID,-1,0
-LinkPostGroup1=SLID
+LinkPost8_2=A,-1,0
+LinkPost8_3=B,-1,0
+LinkPost9_1=I4AMSOV,16744448,0
+LinkPostGroup1=SLID-PlazaID
 LinkPostGroup10=tollgrp
 LinkPostGroup11=AB
 LinkPostGroup12=I4PMSOVTOLL
@@ -487,16 +507,16 @@ LinkPostGroup14=S_I4AMHV3
 LinkPostGroup15=AM TRK
 LinkPostGroup16=S_ SOV TRK
 LinkPostGroup2=lane & speed & capacity
-LinkPostGroup3=DYVOL
+LinkPostGroup3=DYVOL (v_1)
 LinkPostGroup4=FTYPE,ATYPE
 LinkPostGroup5=screen
 LinkPostGroup6=GantryID
 LinkPostGroup7=Lane
 LinkPostGroup8=DEG
-LinkPostGroup9=PlazaID
+LinkPostGroup9=I4 sov
 LinkPostMaxScale=0
 LinkPostMinScale=0
-LinkPostSelectStr1=SLID>0
+LinkPostSelectStr1=SLID>0 || PlazaID>0
 LinkPostSelectStr10=tollgrp>0
 LinkPostSelectStr11=
 LinkPostSelectStr12=I4PMSOVTOLL>0
@@ -511,7 +531,7 @@ LinkPostSelectStr5=screen>0
 LinkPostSelectStr6=gantryID>0
 LinkPostSelectStr7=
 LinkPostSelectStr8=ftype=1
-LinkPostSelectStr9=PlazaID>0
+LinkPostSelectStr9=I4AMSOV>0 || I4PMSOV>0
 NodeCalc1_1=$delete=T
 NodeCalcApply1=1
 NodeCalcCondition1=X<1240000 || X>1290000 || Y<485000 || Y>550000
@@ -530,12 +550,19 @@ NodeColor2_7=16767900,0,4,facility=4
 NodeColor2_8=8323824,0,4,facility=3
 NodeColor2_9=1530815,0,4,facility=2
 NodeColor3_1=2568407,0,5,
+NodeColor4_1=255,0,0,_CENTROID > 0
+NodeColor4_2=8323824,4,10,_CENTROID > 0 & ( (3676 <= N & N <=3722 & (_ZONES >7000||_ZONES==3722)) ||  (4485 <= N & N <=5000 & _ZONES <=0) || (5845 <= N &  (_ZONES<7000||_ZONES!=3722)) )
+NodeColor5_1=255,0,4,n>0
 NodeColorGroup1=Models
 NodeColorGroup2=facility
 NodeColorGroup3=N
+NodeColorGroup4=CENTROID - Ext
+NodeColorGroup5=
 NodeColorPaletteIndex1=0
 NodeColorPaletteIndex2=34
 NodeColorPaletteIndex3=8
+NodeColorPaletteIndex4=0
+NodeColorPaletteIndex5=0
 NodeOrderListIndex=1
 NodeOrderListName1=
 NodeOrderListName10=
@@ -571,18 +598,27 @@ NodeOrderListValue8=
 NodeOrderListValue9=
 NodePopUpDisplayOrder=0
 NodePost1_1=N,-1,0
+NodePost16_1=_ZONES,-1,0
 NodePost2_1=N,12632256,0
 NodePost2_2=X,8421376,0
 NodePost2_3=Y,255,0
 NodePost3_1=_FLAG,-1,0
+NodePost4_1=N,-1,0
+NodePost5_1=N,-1,0
 NodePostGroup1=N
+NodePostGroup16=
 NodePostGroup2=XY
 NodePostGroup3=Flag
+NodePostGroup4=CENTROID
+NodePostGroup5=Centroid Externals
 NodePostMaxScale=0
 NodePostMinScale=0
 NodePostSelectStr1=
+NodePostSelectStr16=
 NodePostSelectStr2=
 NodePostSelectStr3=_FLAG != 0
+NodePostSelectStr4=_CENTROID > 0
+NodePostSelectStr5=_CENTROID > 0 & ( (3676 <= N & N <=3722 & (_ZONES >7000||_ZONES==3722)) ||  (4485 <= N & N <=5000 & _ZONES <=0) || (5845 <= N &  (_ZONES<7000||_ZONES!=3722)) )
 NoVprWarning=0
 PathTraceWidth=5
 PromptUnDo=0
@@ -595,32 +631,22 @@ TransitGap=3
 TransitMaxDraw=10
 TransitWidth=2
 Visible=1
-LinkPost7_2=PMLANE,33023,0
-LinkPost7_3=OPLANE,0,0
-NodeColorGroup4=CENTROID - Ext
-NodeColorPaletteIndex4=0
-NodeColor4_1=255,0,0,_CENTROID > 0
-LinkPost8_2=A,-1,0
-LinkPost8_3=B,-1,0
-NodePostGroup4=CENTROID
-NodePost4_1=N,-1,0
-NodePostSelectStr4=_CENTROID > 0
-NodeColorGroup5=
-NodeColorPaletteIndex5=0
-NodePostGroup5=Centroid Externals
-NodePost5_1=N,-1,0
-NodePostSelectStr5=_CENTROID > 0 & ( (3676 <= N & N <=3722 & (_ZONES >7000||_ZONES==3722)) ||  (4485 <= N & N <=5000 & _ZONES <=0) || (5845 <= N &  (_ZONES<7000||_ZONES!=3722)) )
-NodeColor4_2=8323824,4,10,_CENTROID > 0 & ( (3676 <= N & N <=3722 & (_ZONES >7000||_ZONES==3722)) ||  (4485 <= N & N <=5000 & _ZONES <=0) || (5845 <= N &  (_ZONES<7000||_ZONES!=3722)) )
-NodePostGroup16=
-NodePost16_1=_ZONES,-1,0
-NodePostSelectStr16=
+LinkPost13_2=AMLANE,12632256,0
+LinkColor6_13=12883442,0,3,int(gantryID/10000)=951
+LinkPost1_2=PLAZAID,8421504,0
+LinkPost9_2=I4PMSOV,33023,0
+LinkPost9_3=I424SOV,0,0
+NodeColorGroup16=Issues
+NodeColorPaletteIndex16=0
+NodeColor16_1=12632256,1,1,N>0
+NodeColor16_2=255,0,20,N=22912 || N=22910 || N=22907 || N=22904 || N=22902 || N=22887 || N=22883 || N=22881 || N=22901 || N=22903 || N=22906 || N=22909  || N=22910 || N=22907 || N=22904 || N=22902 || N=22899 || N=22888 || N=22881 || N=22879 || N=22903 || N=22906 || N=22909 || N=22911
 
 [IMGLAYER]
 ActiveLinkColorGroup=0
 ActiveNodeColorGroup=0
 ActiveSelectGroup=0
 BaseX=914800
-BaseY=-300200
+BaseY=-300500
 BoundingBox=0,0,23296,43264
 DefaultCentroidColor=8421504,0,0
 DefaultCentroidLinkColor=8421504,0,1
@@ -647,75 +673,75 @@ Select1=
 SelectGroup1=
 Visible=1
 
-[IMGLAYER-i270]
-ActiveLinkColorGroup=0
-ActiveNodeColorGroup=0
-ActiveSelectGroup=0
-BaseX=1236500
-BaseY=470980
-BoundingBox=0,0,9472,6656
-DefaultCentroidColor=8421504,0,0
-DefaultCentroidLinkColor=8421504,0,1
-DefaultLinkColor=16711935,0,1
-DefaultNodeColor=16711935,0,0
-ExternalDBF=
-ExternalLinkage=
-FileName=bg-i270.png
-FileName2=
-LayerMaxScale=0
-LayerMinScale=0
-LinkColorGroup1=
-LinkColorPaletteIndex1=0
-LinkDrawOffset1=0
-LinkPostMaxScale=0
-LinkPostMinScale=0
-NodeColorGroup1=
-NodeColorPaletteIndex1=0
-NodePostMaxScale=0
-NodePostMinScale=0
-ScaleX=12.2
-ScaleY=12.12
-Select1=
-SelectGroup1=
-Visible=1
+;[IMGLAYER-i270]
+;ActiveLinkColorGroup=0
+;ActiveNodeColorGroup=0
+;ActiveSelectGroup=0
+;BaseX=1236500
+;BaseY=470980
+;BoundingBox=0,0,9472,6656
+;DefaultCentroidColor=8421504,0,0
+;DefaultCentroidLinkColor=8421504,0,1
+;DefaultLinkColor=16711935,0,1
+;DefaultNodeColor=16711935,0,0
+;ExternalDBF=
+;ExternalLinkage=
+;FileName=bg-i270.png
+;FileName2=
+;LayerMaxScale=0
+;LayerMinScale=0
+;LinkColorGroup1=
+;LinkColorPaletteIndex1=0
+;LinkDrawOffset1=0
+;LinkPostMaxScale=0
+;LinkPostMinScale=0
+;NodeColorGroup1=
+;NodeColorPaletteIndex1=0
+;NodePostMaxScale=0
+;NodePostMinScale=0
+;ScaleX=12.2
+;ScaleY=12.12
+;Select1=
+;SelectGroup1=
+;Visible=1
 
-[IMGLAYER-reg]
-ActiveLinkColorGroup=0
-ActiveNodeColorGroup=0
-ActiveSelectGroup=0
-BaseX=967300
-BaseY=-292500
-BoundingBox=0,0,6902,13411
-DefaultCentroidColor=8421504,0,0
-DefaultCentroidLinkColor=8421504,0,1
-DefaultLinkColor=16711935,0,1
-DefaultNodeColor=16711935,0,0
-ExternalDBF=
-ExternalLinkage=
-FileName=.\bg.png
-FileName2=
-LayerMaxScale=0
-LayerMinScale=0
-LinkColorGroup1=
-LinkColorPaletteIndex1=0
-LinkDrawOffset1=0
-LinkPostMaxScale=0
-LinkPostMinScale=0
-NodeColorGroup1=
-NodeColorPaletteIndex1=0
-NodePostMaxScale=0
-NodePostMinScale=0
-ScaleX=78.1903
-ScaleY=78.1903
-Select1=
-SelectGroup1=
-Visible=1
+;[IMGLAYER-reg]
+;ActiveLinkColorGroup=0
+;ActiveNodeColorGroup=0
+;ActiveSelectGroup=0
+;BaseX=967300
+;BaseY=-292500
+;BoundingBox=0,0,6902,13411
+;DefaultCentroidColor=8421504,0,0
+;DefaultCentroidLinkColor=8421504,0,1
+;DefaultLinkColor=16711935,0,1
+;DefaultNodeColor=16711935,0,0
+;ExternalDBF=
+;ExternalLinkage=
+;FileName=.\bg.png
+;FileName2=
+;LayerMaxScale=0
+;LayerMinScale=0
+;LinkColorGroup1=
+;LinkColorPaletteIndex1=0
+;LinkDrawOffset1=0
+;LinkPostMaxScale=0
+;LinkPostMinScale=0
+;NodeColorGroup1=
+;NodeColorPaletteIndex1=0
+;NodePostMaxScale=0
+;NodePostMinScale=0
+;ScaleX=78.1903
+;ScaleY=78.1903
+;Select1=
+;SelectGroup1=
+;Visible=1
 
 [POLYGONS]
 Polygon0=3,Subarea_Boundry_Edited
-Polygon0Line3=1257382,610571,1302864,567504,1312236,551090,1319878,546103,1332268,534780,1336833,525235,1329169,508413,1322616,496471,1321298,493027,1319374,491455,1316402,481811,1315674,478413,1311791,473073
 Polygon0Line1=1311791,473073,1326985,458073,1321824,447177,1321920,444005,1317595,439968,1305675,434681,1301158,408055,1301350,383640,1293468,377104,1286066,377584,1271359,366626,1275108,352689,1247521,343269,1248098,359225,1239735,369991,1219934,380949,1203785,387581,1193212,405076,1186195,413054,1172449,413150
 Polygon0Line2=1165432,426896,1154570,437565,1153513,445063,1136499,461500,1130914,463842,1127889,474710,1130130,485802,1133537,492316,1132034,527703,1131314,540485,1140947,545302,1155028,556788,1170590,554194,1183908,567780,1201351,580023,1222323,590100,1224657,589933,1227921,591601,1230160,592935,1232042,594102
+Polygon0Line3=1257382,610571,1302864,567504,1312236,551090,1319878,546103,1332268,534780,1336833,525235,1329169,508413,1322616,496471,1321298,493027,1319374,491455,1316402,481811,1315674,478413,1311791,473073
 Polygon1=6,NEXT_Charles
 Polygon1Line1=1271285,497249,1272771,497109,1273361,495549,1272964,491476,1278086,492051,1279685,492436,1281096,492782,1281685,491278,1278265,489904,1270584,489596,1269395,488115,1268885,480300,1267089,479414,1263582,478394,1262707,477467,1264194,475307,1261979,474873,1263570,472666,1259108,471040,1258031,469596
 Polygon1Line2=1256385,467435,1255258,464956,1253618,461100,1255487,460542,1255863,459765,1255410,459211,1255135,459061,1254004,458770,1252476,457096,1251211,456128,1250839,453586,1251039,453185,1251439,452331,1250785,451985,1250912,451357,1251676,448856,1251316,446253,1252395,445261,1249827,442183,1249898,441147
@@ -730,8 +756,8 @@ Polygon2Line3=1307761,406900,1308025,405846,1309079,406373,1309870,407251,131057
 Polygon2Line4=1312034,414093,1309887,412625,1308494,411853,1307533,412116,1306667,413133,1306347,413020,1306743,411777,1306140,410949,1304361,410441,1300680,410422,1298872,410855,1297818,411269,1297705,411834,1295276,411589,1293561,412405,1293561,412787,1293061,414317,1291585,414677,1288667,414244,1287612,413698
 Polygon2Line5=1283348,414244,1280872,413999,1277219,412549,1274197,411787,1272735,411876,1268984,411055,1263818,410384,1264843,412159,1264498,412482,1261802,410426,1260177,410945,1257920,411922
 Polygon3=4,I66ItB
-Polygon3Line2=1237856,433704,1243833,431776,1248267,430426,1249557,429967,1250034,430140,1250799,432500,1252627,435362,1263158,437706,1266775,438541,1268007,438183,1269557,437945,1273054,436236,1277105,435919,1279532,436037,1280406,436474,1281479,437428,1283784,437945,1287738,439097,1289169,439256,1290083,442038
 Polygon3Line1=1145666,427699,1140010,416492,1138963,414292,1140115,412198,1146818,411307,1153940,412250,1162319,413245,1163891,412721,1169127,414502,1178344,417539,1183058,422986,1184943,424243,1190086,425189,1193214,426648,1203849,427482,1212983,429269,1218478,430426,1223877,432933,1228794,434475,1233132,434475
+Polygon3Line2=1237856,433704,1243833,431776,1248267,430426,1249557,429967,1250034,430140,1250799,432500,1252627,435362,1263158,437706,1266775,438541,1268007,438183,1269557,437945,1273054,436236,1277105,435919,1279532,436037,1280406,436474,1281479,437428,1283784,437945,1287738,439097,1289169,439256,1290083,442038
 Polygon3Line3=1293104,442356,1296998,442714,1295846,445178,1295003,448703,1291673,450185,1288997,450707,1283776,453207,1281137,453372,1277425,452542,1275766,451819,1273384,451989,1271002,452968,1267323,451989,1263985,452382,1261016,453702,1259021,456417,1255526,459737,1255438,460503,1253885,460765,1253536,461662
 Polygon3Line4=1254410,464680,1253689,464527,1252289,462231,1249224,462359,1238145,462625,1226383,467446,1204982,470723,1192545,474001,1187339,477086,1185315,475544,1179916,472844,1172011,464746,1168541,461758,1167384,459251,1165938,457130,1165359,451346,1164009,443634,1148180,435659,1145666,427699
 Polygon4=1,subarea_I270
@@ -761,150 +787,149 @@ Set1RMargin=0
 Set1ScalePrtLineWidth=1
 Set1TMargin=0
 Set2=set-transit-zoom
-Set2ScalePrtLineWidth=0
-Set2DrawAlwaysOnTop=1
-Set2PrintBackColor=0
-Set2FixedScale=6000
-Set2LMargin=0
-Set2RMargin=0
-Set2TMargin=0
 Set2BMargin=0
-Set2Header1=
+Set2DrawAlwaysOnTop=1
+Set2FixedScale=6000
 Set2Footer1=
-Set2Header2=
 Set2Footer2=
-Set2Header3=
 Set2Footer3=
-Set2Header4=
 Set2Footer4=
-Set2HeaderFont=Tahoma,0,8
-Set2FooterFont=Tahoma,0,8
-Set2HeaderAlignment=Left
 Set2FooterAlignment=Left
+Set2FooterFont=Tahoma,0,8
+Set2Header1=
+Set2Header2=
+Set2Header3=
+Set2Header4=
+Set2HeaderAlignment=Left
+Set2HeaderFont=Tahoma,0,8
+Set2LMargin=0
+Set2PrintBackColor=0
+Set2RMargin=0
+Set2ScalePrtLineWidth=0
+Set2TMargin=0
 Set3=set-transit-zoom
-Set3ScalePrtLineWidth=0
-Set3DrawAlwaysOnTop=1
-Set3PrintBackColor=0
-Set3FixedScale=6000
-Set3LMargin=0
-Set3RMargin=0
-Set3TMargin=0
 Set3BMargin=0
-Set3Header1=
+Set3DrawAlwaysOnTop=1
+Set3FixedScale=6000
 Set3Footer1=
-Set3Header2=
 Set3Footer2=
-Set3Header3=
 Set3Footer3=
-Set3Header4=
 Set3Footer4=
-Set3HeaderFont=Tahoma,0,8
-Set3FooterFont=Tahoma,0,8
-Set3HeaderAlignment=Left
 Set3FooterAlignment=Left
+Set3FooterFont=Tahoma,0,8
+Set3Header1=
+Set3Header2=
+Set3Header3=
+Set3Header4=
+Set3HeaderAlignment=Left
+Set3HeaderFont=Tahoma,0,8
+Set3LMargin=0
+Set3PrintBackColor=0
+Set3RMargin=0
+Set3ScalePrtLineWidth=0
+Set3TMargin=0
 
 [LEGEND]
 LegendDisplay=0
 Set1Legend1Anchor=0,0
 Set1Legend1FullHeight=0
+Set1Legend1Item1=0,0,0,0,0,0,
+Set1Legend1Item1Font=Tahoma,0,8
 Set1Legend1Loc=0,0
 Set1Legend1NumItems=1
 Set1Legend1Size=0,0
 Set1Legend1UnitType=0
 Set1Legend2Anchor=2,0
 Set1Legend2FullHeight=0
+Set1Legend2Item1=0,0,0,0,0,0,
+Set1Legend2Item1Font=Tahoma,0,8
 Set1Legend2Loc=0,0
 Set1Legend2NumItems=1
 Set1Legend2Size=0,0
 Set1Legend2UnitType=0
 Set1Legend3Anchor=0,2
 Set1Legend3FullHeight=0
+Set1Legend3Item1=0,0,0,0,0,0,
+Set1Legend3Item1Font=Tahoma,0,8
 Set1Legend3Loc=0,0
 Set1Legend3NumItems=1
 Set1Legend3Size=0,0
 Set1Legend3UnitType=0
 Set1Legend4Anchor=2,2
 Set1Legend4FullHeight=0
+Set1Legend4Item1=0,0,0,0,0,0,
+Set1Legend4Item1Font=Tahoma,0,8
 Set1Legend4Loc=0,0
 Set1Legend4NumItems=1
 Set1Legend4Size=0,0
 Set1Legend4UnitType=0
-Set2Legend1UnitType=0
 Set2Legend1Anchor=0,0
-Set2Legend1Loc=0,0
-Set2Legend1Size=0,0
 Set2Legend1FullHeight=0
-Set2Legend1NumItems=1
-Set2Legend2UnitType=0
-Set2Legend2Anchor=2,0
-Set2Legend2Loc=0,0
-Set2Legend2Size=0,0
-Set2Legend2FullHeight=0
-Set2Legend2NumItems=1
-Set2Legend3UnitType=0
-Set2Legend3Anchor=0,2
-Set2Legend3Loc=0,0
-Set2Legend3Size=0,0
-Set2Legend3FullHeight=0
-Set2Legend3NumItems=1
-Set2Legend4UnitType=0
-Set2Legend4Anchor=2,2
-Set2Legend4Loc=0,0
-Set2Legend4Size=0,0
-Set2Legend4FullHeight=0
-Set2Legend4NumItems=1
-Set2Legend1Item1Font=Tahoma,0,8
 Set2Legend1Item1=0,0,0,0,0,0,
-Set2Legend2Item1Font=Tahoma,0,8
+Set2Legend1Item1Font=Tahoma,0,8
+Set2Legend1Loc=0,0
+Set2Legend1NumItems=1
+Set2Legend1Size=0,0
+Set2Legend1UnitType=0
+Set2Legend2Anchor=2,0
+Set2Legend2FullHeight=0
 Set2Legend2Item1=0,0,0,0,0,0,
-Set2Legend3Item1Font=Tahoma,0,8
+Set2Legend2Item1Font=Tahoma,0,8
+Set2Legend2Loc=0,0
+Set2Legend2NumItems=1
+Set2Legend2Size=0,0
+Set2Legend2UnitType=0
+Set2Legend3Anchor=0,2
+Set2Legend3FullHeight=0
 Set2Legend3Item1=0,0,0,0,0,0,
-Set2Legend4Item1Font=Tahoma,0,8
+Set2Legend3Item1Font=Tahoma,0,8
+Set2Legend3Loc=0,0
+Set2Legend3NumItems=1
+Set2Legend3Size=0,0
+Set2Legend3UnitType=0
+Set2Legend4Anchor=2,2
+Set2Legend4FullHeight=0
 Set2Legend4Item1=0,0,0,0,0,0,
-Set3Legend1UnitType=0
+Set2Legend4Item1Font=Tahoma,0,8
+Set2Legend4Loc=0,0
+Set2Legend4NumItems=1
+Set2Legend4Size=0,0
+Set2Legend4UnitType=0
 Set3Legend1Anchor=0,0
-Set3Legend1Loc=0,0
-Set3Legend1Size=0,0
 Set3Legend1FullHeight=0
-Set3Legend1NumItems=1
-Set3Legend2UnitType=0
-Set3Legend2Anchor=2,0
-Set3Legend2Loc=0,0
-Set3Legend2Size=0,0
-Set3Legend2FullHeight=0
-Set3Legend2NumItems=1
-Set3Legend3UnitType=0
-Set3Legend3Anchor=0,2
-Set3Legend3Loc=0,0
-Set3Legend3Size=0,0
-Set3Legend3FullHeight=0
-Set3Legend3NumItems=1
-Set3Legend4UnitType=0
-Set3Legend4Anchor=2,2
-Set3Legend4Loc=0,0
-Set3Legend4Size=0,0
-Set3Legend4FullHeight=0
-Set3Legend4NumItems=1
-Set3Legend1Item1Font=Tahoma,0,8
 Set3Legend1Item1=0,0,0,0,0,0,
-Set3Legend2Item1Font=Tahoma,0,8
+Set3Legend1Item1Font=Tahoma,0,8
+Set3Legend1Loc=0,0
+Set3Legend1NumItems=1
+Set3Legend1Size=0,0
+Set3Legend1UnitType=0
+Set3Legend2Anchor=2,0
+Set3Legend2FullHeight=0
 Set3Legend2Item1=0,0,0,0,0,0,
-Set3Legend3Item1Font=Tahoma,0,8
+Set3Legend2Item1Font=Tahoma,0,8
+Set3Legend2Loc=0,0
+Set3Legend2NumItems=1
+Set3Legend2Size=0,0
+Set3Legend2UnitType=0
+Set3Legend3Anchor=0,2
+Set3Legend3FullHeight=0
 Set3Legend3Item1=0,0,0,0,0,0,
-Set3Legend4Item1Font=Tahoma,0,8
+Set3Legend3Item1Font=Tahoma,0,8
+Set3Legend3Loc=0,0
+Set3Legend3NumItems=1
+Set3Legend3Size=0,0
+Set3Legend3UnitType=0
+Set3Legend4Anchor=2,2
+Set3Legend4FullHeight=0
 Set3Legend4Item1=0,0,0,0,0,0,
-Set1Legend1Item1Font=Tahoma,0,8
-Set1Legend1Item1=0,0,0,0,0,0,
-Set1Legend2Item1Font=Tahoma,0,8
-Set1Legend2Item1=0,0,0,0,0,0,
-Set1Legend3Item1Font=Tahoma,0,8
-Set1Legend3Item1=0,0,0,0,0,0,
-Set1Legend4Item1Font=Tahoma,0,8
-Set1Legend4Item1=0,0,0,0,0,0,
+Set3Legend4Item1Font=Tahoma,0,8
+Set3Legend4Loc=0,0
+Set3Legend4NumItems=1
+Set3Legend4Size=0,0
+Set3Legend4UnitType=0
 
 [SAVEVIEWS]
 RestoreLastView=1
-ViewLast=1249556,1262287,526722,532071
 View0=1267615,1273825,490105,494337,tri-w
 View1=1267615,1273825,490105,494337,b
 View2=1268293,1275423,492808,495803,c
@@ -918,6 +943,12 @@ View9=1249556,1262287,526722,532071,Exit9-I370
 ViewA=1248355,1253665,537495,541820,Exit11-Montgomery Village
 ViewB=
 ViewC=1247320,1249846,541940,542922,Exit12-Watkins
+ViewJ=1187447,1191605,427498,431579,Rte 28
+ViewK=1199347,1204971,429702,435222,Fairfax County Pkwy
+ViewL=1210855,1218094,431988,439093,Lee Jackson Memorial Hwy
+ViewLast=1187447,1191605,427498,431579
+ViewM=1221751,1227690,435229,441057,Chan Bridge Rd
+ViewN=1234082,1240004,438696,444508,Nutley St
 
 [DYNASIM]
 DXFFileName=
@@ -1062,9 +1093,10 @@ TrnPostStop=0,0,0,12
 Visible=0
 
 [LayerOrder]
-NumRecords=1
-ScreenColor=16777215
 FreewayOutlineColor=5263440
 NumDisplayDec=-1
-ScreenFont=Consolas,2568407,11,Bold
+NumRecords=1
 Order=HWYLAYER,TRNLAYER,IMGLAYER,PTSLAYER,LINLAYER,BDYLAYER,DRWLAYER
+ScreenColor=16777215
+ScreenFont=Consolas,2568407,8
+;ScreenFont=Consolas,2568407,11,Bold
