@@ -2,7 +2,7 @@
 @set get_inf=2
 set @=%~f0&call "%~dp0cube-p" %*
 
-set mat1_size=%n_mat%
+:: todo: get taz numbers from user
 
 set mat1_size=%n_mat%
 
@@ -30,10 +30,8 @@ nEE      = nLastExt - nLastInt;
 RUN PGM=MATRIX PRNFILE="%PRNFILE%"
   MATI[1] = "%f1%",
     AUTOMDARRAY=MATI1 MI=1
-  // MATO[1]="%dpn1%-joined-sum.mat",MO=1-%mo%, DEC=20*8, NAME = %names%
-  FILEO PRINTO[1] = "%dpn1%-ee-Original_zone_numbers.csv"
-          MATO[1] = "%dpn1%-ee.mat",
-    //  MO=1-6, DEC=S, NAME = SOV,HV2,HV3,CV,TRK,APV
+  FILEO PRINTO[1] = "%dpn1%-ee-[@nLastInt@-@nLastExt@]-Original_zone_numbers.csv"
+          MATO[1] = "%dpn1%-ee-[@nLastInt@-@nLastExt@].mat",
     @ucmt01@ MO=101-101
     @ucmt02@ MO=101-102
     @ucmt03@ MO=101-103
