@@ -32,10 +32,10 @@
 @echo %path%|%SystemRoot%\System32\find /i      "%ProgramW6432%\Citilabs\CubeVoyager">nul||@path      %ProgramW6432%\Citilabs\CubeVoyager;%path%
 @echo %path%|%SystemRoot%\System32\find /i "%ProgramFiles(x86)%\Citilabs\CubeVoyager">nul||@path %ProgramFiles(x86)%\Citilabs\CubeVoyager;%path%
 ::! point to Git location
-@set gitdir=%COMMANDER_PATH%\addon\sci\coding\vcs\Git
-@if [%gitdir%]==[] @set gitdir=%COMMANDER_PATH%\addon\sci\coding\vcs\Git
+@if [%gitdir%]==[] @set gitdir=%COMMANDER_PATH%\addon\sci\dev\vcs\Git
+@set gitdir=%COMMANDER_PATH%\addon\sci\dev\vcs\Git
 @if EXIST "%gitdir%\usr\bin" @path %gitdir%\usr\bin;%path%
-@path %COMMANDER_PATH%\addon\sci\coding\vcs\Git;%path%
+@path %gitdir%;%path%
 
 @set argc=0
 @rem setlocal
