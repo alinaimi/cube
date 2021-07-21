@@ -32,9 +32,10 @@
 @echo %path%|%SystemRoot%\System32\find /i      "%ProgramW6432%\Citilabs\CubeVoyager">nul||@path      %ProgramW6432%\Citilabs\CubeVoyager;%path%
 @echo %path%|%SystemRoot%\System32\find /i "%ProgramFiles(x86)%\Citilabs\CubeVoyager">nul||@path %ProgramFiles(x86)%\Citilabs\CubeVoyager;%path%
 ::! point to Git location
-@if [%gitdir%]==[] @set gitdir=%COMMANDER_PATH%\addon\sci\dev\vcs\Git
-@set gitdir=%COMMANDER_PATH%\addon\sci\dev\vcs\Git
+@if [%gitdir%]==[] @set gitdir=%COMMANDER_PATH%\usr\sci\dev\vcs\Git
+@set gitdir=%COMMANDER_PATH%\usr\sci\dev\vcs\Git
 @if EXIST "%gitdir%\usr\bin" @path %gitdir%\usr\bin;%path%
+@if EXIST "%COMMANDER_PATH%\usr\sci\dev\Qt\Tools\mingw810_64\bin" @path %COMMANDER_PATH%\usr\sci\dev\Qt\Tools\mingw810_64\bin;%path%
 @path %gitdir%;%path%
 
 @set argc=0
@@ -86,7 +87,7 @@
 
 ::!--- Getting Local Date/Time
 @rem @call dt
-@rem %COMMANDER_PATH%\addon\aLieN\Windows\date.exe +"%Y-%m-%d"
+@rem %COMMANDER_PATH%\usr\aLieN\Windows\date.exe +"%Y-%m-%d"
 @for /f "tokens=2 delims==" %%a in ('wmic OS Get localdatetime /value') do @set "dt=%%a"
 @set "yy=%dt:~2,2%" &@set "yyyy=%dt:~0,4%" &@set "mo=%dt:~4,2%" &@set "dd=%dt:~6,2%"
 @set "hh=%dt:~8,2%" &@set  "mm=%dt:~10,2%" &@set "ss=%dt:~12,2%"
