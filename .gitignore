@@ -1,6 +1,18 @@
-# blacklist
+#!========================= alireza naimi .git ignore ==========================
+#! Notes:
+#! - appened # ==> ignore from BL
+#! - "/bin/": root only, "bin/": all dirs
+#! - to ignore only in git *.7z ==> *\.7z or *[.]7z or ...
+#!==============================================================================
+
+#!--- Blaoklist ----------------------------------------------------------------
+__MACOSX
+__pycache__/
 *.dbf
+*.mat
+*.net
 *.log
 *.prn
 *.prj
+*.vtt
 TPPL.VAR 
